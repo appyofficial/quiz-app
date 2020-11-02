@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./App.module.css";
 import { Questionnaire } from "./components";
 import quiz from "./data/quiz";
 import shuffle from "./utils/shuffle";
@@ -26,9 +27,9 @@ function App() {
   };
 
   return (
-    <div>
+    <div className={styles.App}>
       {showResult ? (
-        <div>
+        <div className={styles.showResult}>
           <h4>Result</h4>
           <p>Correct answer : {answeredCorrect}</p>
           <p>Wrong answer : {answeredWrong}</p>

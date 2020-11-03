@@ -25,3 +25,18 @@ h3 {
 .button:hover {
   border-bottom: yellowgreen 1px solid;
 }
+
+.lifeline {
+  border: none;
+  background-color: green;
+  color: whitesmoke;
+  font-size: 15px;
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.lifeline:disabled {
+  background-color: rgb(226, 226, 226);
+  color: rgba(245, 245, 245, 0.877);
+}

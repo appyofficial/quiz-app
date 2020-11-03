@@ -1,7 +1,6 @@
 import styles from "./Questionnaire.module.css";
 import shuffle from "../utils/shuffle";
 import { useState, useEffect, Fragment } from "react";
-import Timer from "./Timer";
 
 const Questionnaire = ({ questions, currIndex, onClick }) => {
   const [is5050Used, setIs5050Used] = useState(false);
@@ -25,7 +24,7 @@ const Questionnaire = ({ questions, currIndex, onClick }) => {
 
   return (
     <Fragment>
-      <div className={styles.main}>
+      <div className={styles.header}>
         <div></div>
         <div>
           <p>Lifelines</p>
@@ -39,6 +38,9 @@ const Questionnaire = ({ questions, currIndex, onClick }) => {
         </div>
       </div>
       <div className={styles.main}>
+        <h5>
+          Question : {currIndex + 1}/{questions.length}
+        </h5>
         <h3>{question.question}</h3>
         <div className={styles.button__container}>
           {answers.map((answer, i) => (

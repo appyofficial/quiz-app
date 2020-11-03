@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./App.module.css";
 import { Questionnaire } from "./components";
 import quiz from "./data/quiz";
@@ -39,6 +39,8 @@ function App() {
           questions={questions}
           currIndex={currIndex}
           onClick={handleAnswerClick}
+          answeredCorrect={answeredCorrect}
+          answeredWrong={answeredWrong}
         />
       )}
     </div>
